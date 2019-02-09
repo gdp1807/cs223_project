@@ -5,10 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Bootstrap 101 Template</title>
+    <title>Generate</title>
 
     <!-- Bootstrap -->
-    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <link href="generate_style.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -18,22 +19,62 @@
     <![endif]-->
   </head>
   <body>
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-      <ol class="carousel-indicators">
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="false">
+      <ol class="carousel-indicators" id="layers">
         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
       </ol>
       <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img class="d-block w-100" src="..." alt="First slide">
-        </div>
-        <div class="carousel-item">
-          <img class="d-block w-100" src="..." alt="Second slide">
-        </div>
-        <div class="carousel-item">
-          <img class="d-block w-100" src="..." alt="Third slide">
-        </div>
+        <div class="carousel-item active" id="0">
+          <div class="container">
+            <div class="jumbotron col-md-3" id="0.1">
+              <div class="dropdown">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                  Dropdown button
+                </button>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">Link 1</a>
+                  <a class="dropdown-item" href="#">Link 2</a>
+                  <a class="dropdown-item" href="#">Link 3</a>
+                </div>
+              </div>
+            </div>
+            <div class="jumbotron col-md-3" id="0.2">
+              <div class="dropdown">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                  Dropdown button
+                </button>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">Link 1</a>
+                  <a class="dropdown-item" href="#">Link 2</a>
+                  <a class="dropdown-item" href="#">Link 3</a>
+                </div>
+              </div>
+            </div>
+            <div class="jumbotron col-md-3" id = "0.3">
+              <div class="dropdown">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                  Dropdown button
+                </button>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">Link 1</a>
+                  <a class="dropdown-item" href="#">Link 2</a>
+                  <a class="dropdown-item" href="#">Link 3</a>
+                </div>
+              </div>
+            </div>
+            <div class="jumbotron col-md-3" id = "0.4">
+              <div class="dropdown">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                  Dropdown button
+                </button>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">Link 1</a>
+                  <a class="dropdown-item" href="#">Link 2</a>
+                  <a class="dropdown-item" href="#">Link 3</a>
+                </div>
+              </div>
+            </div>
+          </div>
       </div>
       <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -44,10 +85,42 @@
         <span class="sr-only">Next</span>
       </a>
     </div>
+  </div>
+    <div class="icons8-plus" onclick="duplicate()"></div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+  <script>
+    function duplicate()
+    {
+      var layers = document.getElementById('layers');
+      var id = parseInt(layers.childNodes.length) - 3;
+      var group = document.getElementById(id);
+      group.setAttribute('class', 'carousel-item');
+      var clone = group.cloneNode(true);
+      clone.id = ++id;
+      clone.setAttribute('class', 'carousel-item active');
+      var quad = clone.querySelectorAll('.col-md-3');
+      quad[0].setAttribute('id', id.toString() + ".1");
+      quad[1].setAttribute('id', id.toString() + ".2");
+      quad[2].setAttribute('id', id.toString() + ".3");
+      quad[3].setAttribute('id', id.toString() + ".4");
+      group.parentNode.appendChild(clone);
+      var ul = layers.getElementsByTagName('li');
+      for(var i = 0; i < ul.length; i++)
+      {
+        if(ul[i].hasAttribute('class'))
+          ul[i].removeAttribute('class');
+      }
+      var li = document.createElement("li");
+      li.setAttribute('data-target', '#carouselExampleIndicators');
+      li.setAttribute('data-slide-to', id);
+      li.setAttribute('class', 'active');
+      layers.appendChild(li);
+    }
+  </script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="bootstrap/js/bootstrap.min.js"></script>
   </body>
 </html>
