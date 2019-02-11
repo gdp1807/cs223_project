@@ -9,7 +9,7 @@
   margin-right: 2%;
   margin-top: 5%;
   margin-bottom: 5%;
-  height: 700px;
+  height: 630px;
   display: flex;
   align-items: center;
 }
@@ -28,4 +28,47 @@ background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vc
 background-size: 100%;
 cursor: pointer;
 float: right;
+}
+
+.form-group
+{
+  background-color: #008CBA;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 6px;
+}
+
+.heading
+{
+  margin: auto;
+  text-align: center;
+  padding-top: 15px;
+}
+
+h2
+{
+  color: rgba(255, 255, 255, 1);
+  font-family: "Arial";
+}
+
+.fa
+{
+  font-size: 70px;
+  float: left;
+  display: flex;
+  cursor: pointer;
+  padding-left: 10px;
+  color: #af1c1c;
+}
+
+#help
+{
+  padding-left: 10px;
+  margin-bottom: 15px;
+  margin-left: 15px;
+  height: auto;
+  width: 350px;
+  display: none;
 }
