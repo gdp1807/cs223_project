@@ -1,15 +1,9 @@
-/*styling.css*/
 /*Style body by adding background image and set it to cover, add font-family*/
 body{
     font-family: Arvo, serif;
     background: #008CBA;
     background-attachment: fixed;
     background-size: cover;
-}
-
-/*Style brand*/
-.logo{
-    height: 30px;
 }
 
 /*Style navigation bar*/
@@ -35,7 +29,6 @@ body{
     background-color: transparent;
     color: #fff;
     text-align: center;
-    margin: 0;
     padding: 35px;
     letter-spacing: 2.5px;
 }
@@ -43,15 +36,6 @@ body{
 /*limit the width of the icons section*/
 .container{
     max-width: 1000px;
-}
-
-/*Style icons section using bootstrap grid system*/
-.bodyimage{
-    height: 100px;
-}
-
-.centreimage{
-    height: 300px;
 }
 
 .col-md-4{
@@ -68,26 +52,19 @@ body{
   font-size: 2em;
 }
 
-/*Style contact button*/
-.contact{
-    text-align: center;
-    margin-top: 30px;
-    margin-bottom: 100px;
-}
-
 .btn{
-    background-color: rgba(0, 255, 184, 0.5);
+    background-color: rgba(255, 255, 255, 1);
     border: none;
     border-radius: 10px;
-    color: #fff;
-    font-size: 18px;
+    color: #008CBA;
+    font-size: 20px;
     padding: 10px 70px;
     letter-spacing: 1.3px;
 }
 
 .btn:hover{
-    background-color: rgba(0, 0, 0, 0.5);
-    color: #fff;
+    background-color: #008CBA;
+    color: rgba(255, 255, 255, 1);
     border: none;
 }
 /*Style footer*/
@@ -96,10 +73,21 @@ body{
     color: grey;
     font-size: 15px;
     padding: 10px 0;
+    margin-top: 55px;
+    margin-bottom: 0px;
 }
-/*use media queries to change icons size in small devices*/
-@media (max-width: 768px){
-    .bodyimage{
-        height: 70px;
-    }
+
+a
+{
+  color: white;
+}
+
+a:active
+{
+  color: white;
+}
+
+a:hover
+{
+  color: white;
 }
