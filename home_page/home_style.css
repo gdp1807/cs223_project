@@ -1,0 +1,93 @@
+/*Style body by adding background image and set it to cover, add font-family*/
+body{
+    font-family: Arvo, serif;
+    background: #008CBA;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+/*Style navigation bar*/
+.navbar-inverse{
+    background: rgba(0,0,0,0.5);
+}
+
+.nav li{
+    color: #fff;
+    font-size: 17px;
+    margin-right: 20px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.nav li:hover{
+    border-bottom: #00FFB8;
+    cursor: pointer;
+}
+
+/*Style jumbotron*/
+.jumbotron{
+    background-color: transparent;
+    color: #fff;
+    text-align: center;
+    padding: 35px;
+    letter-spacing: 2.5px;
+}
+
+/*limit the width of the icons section*/
+.container{
+    max-width: 1000px;
+}
+
+.col-md-4{
+    text-align: center;
+    color: #fff;
+}
+
+.icons p{
+    font-size: 15px;
+}
+
+.icon
+{
+  font-size: 2em;
+}
+
+.btn{
+    background-color: rgba(255, 255, 255, 1);
+    border: none;
+    border-radius: 10px;
+    color: #008CBA;
+    font-size: 20px;
+    padding: 10px 70px;
+    letter-spacing: 1.3px;
+}
+
+.btn:hover{
+    background-color: #008CBA;
+    color: rgba(255, 255, 255, 1);
+    border: none;
+}
+/*Style footer*/
+.footer{
+    background-color: rgba(0, 0, 0, 0.5);
+    color: grey;
+    font-size: 15px;
+    padding: 10px 0;
+    margin-top: 55px;
+    margin-bottom: 0px;
+}
+
+a
+{
+  color: white;
+}
+
+a:active
+{
+  color: white;
+}
+
+a:hover
+{
+  color: white;
+}
