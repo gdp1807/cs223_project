@@ -1,0 +1,50 @@
+.jumbotron
+{
+  padding: 0px;
+  background-color: rgb(188, 249, 221);
+  border-radius: 0;
+}
+
+#send
+{
+  display: flex;
+  padding-left: 35%;
+}
+
+h1
+{
+  font-weight: 700;
+  margin-bottom: 0px;
+}
+
+pre
+{
+  margin-top: 0px;
+}
+
+.fa
+{
+  cursor: pointer;
+}
+
+.fa-copy
+{
+  padding-bottom: 15px;
+  padding-left: 5px;
+  padding-top:15px;
+  font-size: 1.25em;
+}
+
+.fa-envelope-square
+{
+  padding-bottom: 10px;
+  font-size: 1.75em;
+  padding-left: 10px;
+  padding-top: 5px;
+}
+
+.form-control
+{
+  width: 35%;
+  border-radius: 500px;
+}
