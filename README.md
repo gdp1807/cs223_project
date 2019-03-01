@@ -1,6 +1,6 @@
 ## About
 
-This repository contains the code for the project, **CODE GENERATION FOR NEURAL NETWORKS**.
+This repository contains the code for the project, **AUTOMATIC CODE GENERATION FOR DEEP LEARNING MODELS**.
 
 ## Project Details
 ### Team
