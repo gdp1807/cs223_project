@@ -38,3 +38,9 @@ function copy()
   }
   document.body.removeChild(textArea);
 }
+
+function send()
+{
+  email = document.getElementById('email');
+  window.location.href = window.location.href + "&email=" + email;
+}
