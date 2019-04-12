@@ -7,6 +7,9 @@ $(document).ready(function() {
 
 function copy()
 {
+  /*
+  Copies the code to the clipboard.
+  */
   var txt = $('.code').text();
   if(!txt || txt == '')
   {
@@ -37,4 +40,13 @@ function copy()
     console.log('Oops, unable to copy');
   }
   document.body.removeChild(textArea);
+}
+
+function send()
+{
+  /*
+  Sends the request to server for mailing the code.
+  */
+  email = document.getElementById('email');
+  window.location.href = window.location.href + "&email=" + email;
 }

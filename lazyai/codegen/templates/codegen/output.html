@@ -31,20 +31,10 @@
       <div class="row h-100 justify-content-center align-items-center">
         <div class="jumbotron">
           <i class="fa fa-copy" onclick="copy()"></i>
-          <pre><code data-language="python" class="code">def define_models(n_input, n_output, n_units, timesteps):
-      inputs = Input(shape=(timesteps, n_input))
-      encoded, state_h, state_c = LSTM(n_units, return_sequences = True, return_state = True)\
-      (inputs)
-      decoded = LSTM(n_units, return_sequences = True)\
-      (encoded, initial_state = [state_h, state_c])
-      decoded = Dropout(0.5)(decoded)
-      decoded = TimeDistributed(Dense(n_units))(decoded)
-      decoded = Softmax()(decoded)
-      model = Model(inputs, decoded)
-      return model</code></pre>
+          <pre><code data-language="python" class="code">{{ code }}</code></pre>
       <div class="jumbotron" id="send">
-      <input class="form-control" placeholder="Mail for code..."></input>
-      <i class="fa fa-envelope-square"></i>
+      <input class="form-control" placeholder="Mail for code..." id="email"></input>
+      <i class="fa fa-envelope-square" onclick="send()"></i>
       </div>
       </div>
       </div>
