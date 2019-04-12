@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.template import loader
 from django.core.mail import send_mail
-# Create your views here.
+
 def home(request):
     """
     Renders the home.html template.
@@ -22,6 +22,42 @@ def generate(request):
 def output(request):
     """
     Renders the output.html template.
+
+    Parameters
+    ==========
+
+    The parameters obtained from request are listed below,
+
+    layers : The number of layers in the neural network.
+    l_i    : The type of the ith layer. See the list of currently,
+             supported layers.
+    n_i    : Number of units/nodes in the ith layer.
+    email  : The email to which the generated code is to be sent.
+             By default, null string.
+
+    Returns
+    =======
+
+    The parameters returned in the context are given below,
+
+    'code' : The generated code of the model.
+
+    Supported Layers
+    ================
+    Format : '.. [<type>] <name>'
+    .. [1] Dense
+    .. [2] Conv2D
+    .. [3] Conv3D
+    .. [4] LSTM
+    .. [5] Activation
+           .. [1] relu
+           .. [2] sigmoid
+           .. [3] tanh
+
+    Notes
+    =====
+
+    The 'return_state' and 'return_sequences' are by default set to True.
     """
     num_layers, layers, nodes = int(request.GET["layers"]), [], []
     activations = {'1': 'relu', '2': 'sigmoid', '3': 'tanh'}
