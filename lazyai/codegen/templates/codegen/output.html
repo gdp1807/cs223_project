@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>LazyAI</title>
+
+    <!-- Bootstrap, Font-Awesome, Google-Fonts and CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
+    <link href="{% static 'css/github.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'css/common_style.css' %}" rel="stylesheet">
+    <link href="{% static 'css/output_style.css' %}" rel="stylesheet">
+
+  </head>
+  <body>
+    <nav class="navbar">
+      <a class="navbar-brand" href="/">
+        <div class="fa fa-home"></div>
+      </a>
+      <a class="navbar-brand" href="/generate">
+        <div class="fa fa-code"></div>
+      </a>
+    </nav>
+    <div class="container h-100">
+      <div class="row h-100 justify-content-center align-items-center">
+        <div class="jumbotron">
+          <i class="fa fa-copy" onclick="copy()"></i>
+          <pre><code data-language="python" class="code">{{ code }}</code></pre>
+      <div class="jumbotron" id="send">
+      <input class="form-control" placeholder="Mail for code..." id="email"></input>
+      <i class="fa fa-envelope-square" onclick="send()"></i>
+      </div>
+      </div>
+      </div>
+    </div>
+
+    <!-- jQuery and javascript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+    <script src="{% static 'js/rainbow-custom.min.js' %}"></script>
+    <script src="{% static 'js/python.js' %}"></script>
+    <script src="{% static 'js/output_js.js' %}"></script>
+  </body>
+</html>

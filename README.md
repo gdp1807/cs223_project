@@ -1,6 +1,6 @@
 ## About
 
-This repository contains the code for the project, **CODE GENERATION FOR NEURAL NETWORKS**.
+This repository contains the code for the project, **AUTOMATIC CODE GENERATION FOR DEEP LEARNING MODELS**.
 
 ## Project Details
 ### Team
@@ -11,3 +11,20 @@ This repository contains the code for the project, **CODE GENERATION FOR NEURAL 
 
 ### Mentor
 Prof. Sumit Kalra
+
+## Dependencies
+
+Please install the following on your system to be part
+of the development of the project,
+
+1. python3
+See [this](https://docs.python-guide.org/starting/install3/linux/) for more details.
+2. django - 2.1.7
+See [this](https://www.djangoproject.com/download/) for more details.
+
+## Development Environment
+
+1. OS     - Ubuntu 18.04 LTS
+2. Editor - Atom
+
+Pull Requests and Issues are most welcome.
